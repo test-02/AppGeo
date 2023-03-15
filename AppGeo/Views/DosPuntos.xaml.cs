@@ -1,29 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
-using static Xamarin.Essentials.Permissions;
 
 namespace AppGeo.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageMapa : ContentPage
+    public partial class DosPuntos : ContentPage
     {
-        public PageMapa()
+        public DosPuntos()
         {
             InitializeComponent();
-            Ubicacion();
+
+            DosUbicaciones();
         }
 
-        private async void Ubicacion()
+        private async void DosUbicaciones()
         {
-            Title = "Region del mapa con chincheta";
+            Title = "Varias chinchetas";
 
             var conecetividad = Connectivity.NetworkAccess;
 
@@ -34,6 +33,8 @@ namespace AppGeo.Views
 
                 Position position = new Position(location.Latitude, location.Longitude);
 
+                Position position2 = new Position(15.77, -86.76);
+
                 Pin pin = new Pin
                 {
                     Label = "Mi Ubicacion",
@@ -43,9 +44,22 @@ namespace AppGeo.Views
                 };
                 map.Pins.Add(pin);
 
-                map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromKilometers(1)));
+                Pin pin2 = new Pin
+                {
+                    Label = "Otra Ubicacion",
+                    Address = "",
+                    Type = PinType.Place,
+                    Position = position2
+                };
+                map.Pins.Add(pin2);
+
+                var midLat = (position.Latitude + (position2.Latitude)) / 2;
+                var midLng = (position.Longitude + (position2.Longitude)) / 2;
+
+                var midPoint = new MapSpan(new Xamarin.Forms.Maps.Position(midLat, midLng), 2, 2);
+
+                map.MoveToRegion(midPoint);
             }
         }
-
     }
 }

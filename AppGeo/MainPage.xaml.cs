@@ -15,9 +15,14 @@ namespace AppGeo
             InitializeComponent();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void MiUbicacion_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Views.PageMapa());
+        }
+
+        private async void DosUbicaciones_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.DosPuntos());
         }
     }
 }
