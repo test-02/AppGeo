@@ -24,5 +24,10 @@ namespace AppGeo
         {
             await Navigation.PushAsync(new Views.DosPuntos());
         }
+
+        private async void Navegacion_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.Navegacion());
+        }
     }
 }

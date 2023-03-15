@@ -15,6 +15,8 @@
         <Button x:Name="MiUbicacion" Text="Un punto" FontSize="Body" Clicked="MiUbicacion_Clicked" Margin="10,0,10,0"/>
 
         <Button x:Name="DosUbicaciones" Text="Dos Puntos" FontSize="Body" Clicked="DosUbicaciones_Clicked" Margin="10,30,10,0"/>
+
+        <Button x:Name="Navegacion" Text="Navegacion" FontSize="Body" Clicked="Navegacion_Clicked" Margin="10,30,10,0"/>
     </StackLayout>
 
 </ContentPage>
