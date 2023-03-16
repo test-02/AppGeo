@@ -20,7 +20,7 @@ namespace AppGeo.Views
             DosNavegacion();
         }
 
-        /*private async void DosNavegacion()
+        private async void DosNavegacion()
         {
             Title = "Navegacion";
 
@@ -39,11 +39,11 @@ namespace AppGeo.Views
 
                 await Xamarin.Essentials.Map.OpenAsync(location, options);
             }
-        }*/
+        }
 
-        private void DosNavegacion()
+        /*private void DosNavegacion()
         {
             // Proba aqui
-        }
+        }*/
     }
 }

@@ -45,6 +45,10 @@ namespace AppGeo.Views
 
                 map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromKilometers(1)));
             }
+            else 
+            {
+                await DisplayAlert("Alerta", "Debe conectarse al internet", "Aceptar");
+            }
         }
 
     }

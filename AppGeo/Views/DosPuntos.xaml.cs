@@ -38,7 +38,7 @@ namespace AppGeo.Views
                 Pin pin = new Pin
                 {
                     Label = "Mi Ubicacion",
-                    Address = "",
+                    Address = "Casa",
                     Type = PinType.Place,
                     Position = position
                 };
@@ -47,7 +47,7 @@ namespace AppGeo.Views
                 Pin pin2 = new Pin
                 {
                     Label = "Otra Ubicacion",
-                    Address = "",
+                    Address = "Joel",
                     Type = PinType.Place,
                     Position = position2
                 };

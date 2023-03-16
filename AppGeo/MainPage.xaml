@@ -5,18 +5,18 @@
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Tarea Xamarin Forms" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 
         <Label Text="Inicio de la Geolocalización y Mapas" FontSize="Title" Padding="30,10,30,10"/>
 
-        <Label Text="Ejemplo de Geolocalización" FontSize="16" Padding="30,0,30,0"/>
+        <Label Text="Ejemplo de Geolocalización con Mapa" FontSize="16" Padding="30,0,30,0"/>
 
         <Button x:Name="MiUbicacion" Text="Un punto" FontSize="Body" Clicked="MiUbicacion_Clicked" Margin="10,0,10,0"/>
 
         <Button x:Name="DosUbicaciones" Text="Dos Puntos" FontSize="Body" Clicked="DosUbicaciones_Clicked" Margin="10,30,10,0"/>
 
-        <Button x:Name="Navegacion" Text="Navegacion" FontSize="Body" Clicked="Navegacion_Clicked" Margin="10,30,10,0"/>
+        <Button x:Name="Navegacion" Text="Navegacion Google Maps" FontSize="Body" Clicked="Navegacion_Clicked" Margin="10,30,10,0"/>
     </StackLayout>
 
 </ContentPage>
